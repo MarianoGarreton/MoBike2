@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"> </link>
+		<link rel="stylesheet" type="text/css" href="css/Estilo.css"></link>
+		<title>RecuperarClave</title>
+	</head>
+	<body>
+	  <!---Header de aplicación, imagenes y texto de bienvenida--->
+		<center id="cuerpo">
+		<div class="row" id="formulario">
+		<div class="col-md-12" id="bienvenida">
+			<label>Bienvenidos a MOBIKE</label>
+			<img id="imagen1" src="img/bike.png" class="img-responsive img-circle">
+			<img id="imagen2" src="img/mobike-logo.png" class="img-responsive img-circle">
+		</div>
+		</center>
+		<!---Grilla de recuperación de clave--->
+		<center>
+		<h2>Recuperar Clave</h2>
+		<div class="row">
+		<div class="col-md-3"></div>
+			<div id="email" class="col-md-6">
+				<label class="form-label">Email: </label>
+				<input type="email" id="inputEmail" placeholder="Ingrese Email" ><span id="emailOK" required></span>
+			<div class="col-md-3"></div></div>
+			
+			<!--- se indica mensaje al usuario para orientarlo sobre que email debe ingresar--->
+			<div id="referencia" class="col-md-12">
+				<label>Email registrado en la app</label>
+			</div></div>
+			
+			<!--- botones aceptar y cancelar con sus correspondientes id y link de destino--->
+			<div id= "btnAceptar" class="col-md-12">
+			    <input type="submit" id="btnAceptar" value=" Aceptar " class="btn btn-primary stretched-link">
+				<a href="login.html" class="text-warning stretched-link"></a>
+			</div>
+			<div id= "btnCancelar" class="col-md-12">
+				<input type="submit" id="btnCancelar" value="Cancelar" class="btn btn-primary stretched-link">
+				<a href="home.html" class="text-warning stretched-link"></a>
+			</div>
+			
+			<div id="info">
+				<center>
+					<label>Version 1.0 app mobile compras</label>
+				</center>
+			</div>
+			
+		<script type="text/javascript">
+
+		
+		$('#btnAceptar').click(function(){
+			alert('Clave enviada con éxito')
+		});
+		
+		document.getElementById('inputEmail').addEventListener('input', function() {
+		campo = event.target;
+		valido = document.getElementById('emailOK');
+        
+		emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+		//Se muestra un texto a modo de ejemplo, luego va a ser un icono
+		if (emailRegex.test(campo.value)) {
+      valido.innerText = "Email Valido";
+		} else {
+      valido.innerText = "Email Invalido";
+		}
+		});
+		
+		</script>
+		</center>	
+	</body>
+	<footer>
+	</footer>
+	<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>

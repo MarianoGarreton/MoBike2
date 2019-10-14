@@ -1,0 +1,7 @@
+h1{border:1px solid #000000;}
+
+div{border:1px solid #000000;}
+
+.btn-black{col:#ffffff; background-color:#000000; border:1px solid #000000}
+
+.btn-blue:hover{col:#ffffff; background-color:#000055; border:1px solid #000055}
